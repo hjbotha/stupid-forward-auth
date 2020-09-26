@@ -4,7 +4,7 @@
 $time_execution = false;
 
 // Log reasons to web server log when calling allow() and block()
-$log_matches = true;
+$log_matches = false;
 
 // Reject requests and output full request details in response.
 // Potentially dangerous. Exposes internal host names and IP addresses.

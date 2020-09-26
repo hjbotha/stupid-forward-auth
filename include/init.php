@@ -14,6 +14,8 @@ json_encode($_SERVER);
 
 $client_address_obj = \IPLib\Range\Single::fromString($client_address);
 
+$feedback = "";
+
 if ($debug === true) {
     header("HTTP/1.1 403 Forbidden");
     var_dump($fullrequest);
