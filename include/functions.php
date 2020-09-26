@@ -8,18 +8,17 @@ function allow(string $reason = null) {
 }
 
 function block(string $reason = null) {
+	header("HTTP/1.1 403 Forbidden");
 	if ($reason) {
 		log_match("Blocked: " . $reason);
 	}
-	reject_request();
+	inform_client();
 }
 
-function reject_request() {
-	header("HTTP/1.1 403 Forbidden");
+function inform_client() {
 	echo("<H1>");
 	echo("Forbidden");
 	echo("</H1>");
-	exit;
 }
 
 function printExecutionTime($start, $time_execution = false)

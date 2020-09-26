@@ -9,6 +9,6 @@ $log_matches = true;
 // Reject requests and output full request details in response.
 // Potentially dangerous. Exposes internal host names and IP addresses.
 // Don't leave enabled for too long and preferably not at all when exposed to internet.
-$debug = true;
+$debug = false;
 
 ?>
