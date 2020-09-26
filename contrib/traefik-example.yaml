@@ -1,0 +1,7 @@
+http:
+  middlewares:
+      stupid-forward-auth:
+          forwardAuth:
+              # URL to the forward auth script - http://server:port/
+              address: "http://server:82/"
+
