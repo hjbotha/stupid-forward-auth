@@ -15,8 +15,8 @@ What it does:
 - Configure your proxy to send forward-auth requests to that server
 - Copy rules.example.php to rules.php and edit according to your needs
 
-The contrib directory contains an example traefik configuration file. To have traefik authenticate requests to a given service, add this label:
-traefik.http.routers.<service-name>.middlewares=stupid-forward-auth@file
+The contrib directory contains an example traefik configuration file. To have traefik authenticate requests to a given service, add this label:  
+traefik.http.routers.\<service-name\>.middlewares=stupid-forward-auth@file
 
 ## Notes
 - Exact proxy forward auth behaviour might differ, but generally, if the script responds with 2xx, the request will be allowed, while a 4xx response would result in the request being blocked.
